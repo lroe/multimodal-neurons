@@ -268,6 +268,18 @@ export const Scene19: React.FC = () => {
           </g>
         </g>
       ) : null}
+      <Label x={960} y={820} size={30} at={301.0} color={C.muted} opacity={rowP * (1 - gridP)}>
+        two tools
+      </Label>
+      <Label x={960} y={200} size={32} at={305.0} color={C.muted} opacity={gridP * (1 - staticP)}>
+        top images
+      </Label>
+      <Label x={960} y={760} size={32} at={312.0} color={C.muted} opacity={staticP}>
+        optimized static
+      </Label>
+      <Label x={960} y={940} size={36} at={318.0} color={C.pink} opacity={likeP}>
+        what the neuron likes
+      </Label>
     </g>
   );
 };
@@ -323,6 +335,21 @@ export const Scene20: React.FC = () => {
           <circle key={i} cx={[660, 860, 1060, 1260][i]} cy={676} r={14} fill="none" stroke={C.pink} strokeWidth={2.2} opacity={0.55} />
         ))}
       </g>
+      <Label x={660} y={910} size={24} at={321.6} color={C.muted} opacity={card1}>
+        image
+      </Label>
+      <Label x={860} y={910} size={24} at={330.4} color={C.muted} opacity={card2}>
+        word
+      </Label>
+      <Label x={1060} y={910} size={24} at={333.0} color={C.muted} opacity={card3}>
+        mask
+      </Label>
+      <Label x={1260} y={910} size={24} at={335.9} color={C.muted} opacity={card4}>
+        costume
+      </Label>
+      <Label x={960} y={990} size={42} at={cue('Same', 336.5)} color={C.pink} opacity={sameP}>
+        same neuron
+      </Label>
     </g>
   );
 };
@@ -352,6 +379,12 @@ export const Scene21: React.FC = () => {
           <StaticBlock x={it.x} y={it.y} p={noiseP} w={180} h={150} seed={2520 + i * 7} opacity={0.65} />
         </g>
       ))}
+      <Label x={960} y={870} size={38} at={351.0} color={C.muted} opacity={gridP * (1 - noiseP)}>
+        sensible
+      </Label>
+      <Label x={960} y={870} size={38} at={cue('noise', 355)} color={C.muted} opacity={noiseP}>
+        noise
+      </Label>
     </g>
   );
 };

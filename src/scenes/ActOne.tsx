@@ -243,6 +243,24 @@ export const Scene06: React.FC = () => {
           />
         ))}
       </g>
+      <Label x={960} y={128} size={32} at={64.9} color={C.muted} opacity={neuronP}>
+        one neuron
+      </Label>
+      <Label x={960} y={900} size={34} at={cue('Photos', 67)} color={C.muted} opacity={photoOp}>
+        photo
+      </Label>
+      <Label x={960} y={900} size={34} at={cue('pencil', 69)} color={C.muted} opacity={sketchOp}>
+        sketch
+      </Label>
+      <Label x={960} y={900} size={34} at={cue('catwoman', 71)} color={C.muted} opacity={maskOp}>
+        catwoman mask
+      </Label>
+      <Label x={960} y={900} size={34} at={cue('name', 75)} color={C.muted} opacity={nameOp * (1 - soundP)}>
+        written name
+      </Label>
+      <Label x={960} y={900} size={34} at={cue('spoken', 79.5)} color={C.muted} opacity={soundP}>
+        spoken name
+      </Label>
     </g>
   );
 };
@@ -431,6 +449,15 @@ export const Scene08: React.FC = () => {
           </g>
         ))}
       </g>
+      <Label x={700} y={375} size={26} at={cue('face', 117)} color={C.muted} opacity={inputP}>
+        photo
+      </Label>
+      <Label x={1220} y={375} size={26} at={cue('name', 118)} color={C.muted} opacity={inputP}>
+        name
+      </Label>
+      <Label x={960} y={955} size={26} at={cue('sketch', 119)} color={C.muted} opacity={inputP}>
+        sketch
+      </Label>
     </g>
   );
 };
@@ -455,6 +482,15 @@ export const Scene09: React.FC = () => {
       <Ink d={lineD(870, 560, 1050, 560, 1380, 0.8)} p={Math.min(brainP, netP)} color={C.deep} width={2.4} dash="1 14" opacity={0.6} />
       <Label x={960} y={330} size={150} at={129.2} color={C.yellow} font="display" weight={700}>
         ?
+      </Label>
+      <Label x={720} y={760} size={30} at={cue('brain', 123)} color={C.muted} opacity={brainP}>
+        brain
+      </Label>
+      <Label x={1200} y={760} size={30} at={cue('neural', 126)} color={C.muted} opacity={netP}>
+        neural network
+      </Label>
+      <Label x={960} y={900} size={36} at={cue('same', 130)} color={C.yellow} opacity={qP}>
+        same concepts?
       </Label>
     </g>
   );

@@ -62,6 +62,12 @@ export const Scene10: React.FC = () => {
           <Ink d={lineD(956, 868, 1008, 790, 1531, 0.7)} p={checkP} color={C.green} width={5} />
         </g>
       ) : null}
+      <Label x={960} y={200} size={32} at={137.8} color={C.muted} opacity={cardsP * 0.7}>
+        one label per photo
+      </Label>
+      <Label x={960} y={930} size={32} at={143.8} color={C.green} opacity={checkP * 0.8}>
+        correct label
+      </Label>
     </g>
   );
 };
@@ -187,6 +193,12 @@ export const Scene12: React.FC = () => {
         ))}
         <Ink d={lineD(610, 718, 1250, 718, 1720, 1.2)} p={strikeP} color={C.red} width={4.2} />
       </g>
+      <Label x={960} y={610} size={32} at={173.1} color={C.muted} opacity={titleP * 0.7}>
+        January 2021
+      </Label>
+      <Label x={960} y={810} size={36} at={cue('labels', 179)} color={C.muted} opacity={labelsP}>
+        no fixed labels
+      </Label>
     </g>
   );
 };
@@ -248,6 +260,18 @@ export const Scene13: React.FC = () => {
         <Ink d={lineD(1112, 460, 1288, 460, 1802, 0.6)} p={commentP} color={C.yellow} width={3} />
         
       </g>
+      <Label x={960} y={220} size={34} at={181.6} color={C.muted} opacity={browP * 0.7}>
+        internet pairs
+      </Label>
+      <Label x={720} y={520} size={26} at={cue('caption', 188)} color={C.cyan} opacity={capP}>
+        caption
+      </Label>
+      <Label x={960} y={520} size={26} at={cue('title', 188.5)} color={C.pink} opacity={titleP}>
+        title
+      </Label>
+      <Label x={1200} y={520} size={26} at={cue('comment', 189)} color={C.yellow} opacity={commentP}>
+        comment
+      </Label>
     </Browser>
   );
 };
@@ -317,6 +341,18 @@ export const Scene14: React.FC = () => {
           ))}
         </g>
       ) : null}
+      <Label x={690} y={760} size={28} at={194.45} color={C.muted} opacity={stackP}>
+        10,000 photos
+      </Label>
+      <Label x={1230} y={760} size={28} at={195.68} color={C.muted} opacity={stackP}>
+        10,000 captions
+      </Label>
+      <Label x={960} y={940} size={34} at={cue('shuffles', 195)} color={C.cyan} opacity={shuffleP * (1 - matchP)}>
+        shuffle
+      </Label>
+      <Label x={960} y={940} size={34} at={cue('pair', 198)} color={C.green} opacity={matchP * (1 - beachP)}>
+        pair them up
+      </Label>
     </g>
   );
 };

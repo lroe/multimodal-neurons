@@ -111,6 +111,12 @@ export const Scene22: React.FC = () => {
       <PersonCard x={720} p={cardP * obamaP} name="Obama" image="source/obama.jpg" note="photo example" opacity={cardP * (1 - jesusP * 0.72)} />
       <PersonCard x={960} p={cardP * jesusP} name="Jesus" image="source/jesus_neuron.png" note="neuron view" opacity={cardP * (1 - trumpP * 0.72)} />
       <PersonCard x={1200} p={cardP * trumpP} name="Trump" image="source/trump_neuron.png" note="neuron view" opacity={cardP} />
+      <Label x={960} y={250} size={34} at={363.2} color={C.muted} opacity={cardP * 0.7}>
+        person neurons
+      </Label>
+      <Label x={960} y={940} size={28} at={383.2} color={C.muted} opacity={manyP * 0.75}>
+        1,500 hand-labeled images
+      </Label>
     </g>
   );
 };
@@ -185,6 +191,21 @@ export const Scene23: React.FC = () => {
           </g>
         ) : null}
       </g>
+      <Label x={960} y={760} size={44} at={390.4} color={C.muted} opacity={dimmerP * (1 - graphP) * 0.9}>
+        not a dimmer
+      </Label>
+      <Label x={790} y={610} size={26} at={392.6} color={C.red} opacity={graphP}>
+        weak
+      </Label>
+      <Label x={995} y={520} size={26} at={392.8} color={C.yellow} opacity={graphP}>
+        medium
+      </Label>
+      <Label x={1220} y={450} size={26} at={393.0} color={C.green} opacity={graphP}>
+        strong
+      </Label>
+      <Label x={800} y={750} size={26} at={396.2} color={C.red} opacity={negP}>
+        negative
+      </Label>
     </g>
   );
 };
@@ -237,7 +258,7 @@ export const Scene24: React.FC = () => {
   const camP = useP(418.2, 0.6);
   return (
     <g>
-      <SourceIcon src="source/sprites/globe_regions.png" cx={960} cy={510} size={500} opacity={globeP} />
+      <SourceIcon src="source/sprites/globe_regions.png" cx={960} cy={500} size={480} opacity={globeP} />
       <g opacity={globeP}>
         {[
           {x: -0.5, y: -0.28, color: C.orange, at: cue('United', 404.5)},
@@ -246,8 +267,8 @@ export const Scene24: React.FC = () => {
           {x: 0.68, y: -0.07, color: C.purple, at: cue('Middle', 407.4)},
         ].map((m, i) => {
           const vis = t >= m.at ? 1 : 0;
-          const mx = 960 + m.x * 245;
-          const my = 510 + m.y * 245;
+          const mx = 960 + m.x * 235;
+          const my = 500 + m.y * 235;
           return (
             <g key={i} opacity={vis}>
               <circle cx={mx} cy={my} r={6} fill={C.ink} stroke={m.color} strokeWidth={3} />
@@ -255,6 +276,16 @@ export const Scene24: React.FC = () => {
             </g>
           );
         })}
+      </g>
+      <g>
+        <circle cx={560} cy={772} r={5} fill={C.orange} opacity={t >= cue('United', 404.5) ? 1 : 0} />
+        <Label x={574} y={772} size={24} at={cue('United', 404.5)} color={C.orange} anchor="start">United States</Label>
+        <circle cx={800} cy={772} r={5} fill={C.cyan} opacity={t >= cue('Europe', 405.5) ? 1 : 0} />
+        <Label x={814} y={772} size={24} at={cue('Europe', 405.5)} color={C.cyan} anchor="start">Europe</Label>
+        <circle cx={1040} cy={772} r={5} fill={C.green} opacity={t >= cue('Africa', 406.4) ? 1 : 0} />
+        <Label x={1054} y={772} size={24} at={cue('Africa', 406.4)} color={C.green} anchor="start">Africa</Label>
+        <circle cx={1240} cy={772} r={5} fill={C.purple} opacity={t >= cue('Middle', 407.4) ? 1 : 0} />
+        <Label x={1254} y={772} size={24} at={cue('Middle', 407.4)} color={C.purple} anchor="start">Middle East</Label>
       </g>
       <g opacity={iconsP}>
         <SourceIcon src="source/sprites/place_flag.png" cx={480} cy={890} size={180} opacity={1} />
@@ -428,6 +459,12 @@ export const Scene26: React.FC = () => {
       {alteredP > 0 ? (
         <circle cx={960} cy={650} r={126} fill="none" stroke={C.orange} strokeWidth={2.2} opacity={0.25 * alteredP} />
       ) : null}
+      <Label x={720} y={510} size={26} at={454.2} color={C.muted} opacity={gridP}>seasons</Label>
+      <Label x={960} y={510} size={26} at={456.7} color={C.muted} opacity={gridP}>morning</Label>
+      <Label x={1200} y={510} size={26} at={459.3} color={C.muted} opacity={gridP}>counting</Label>
+      <Label x={720} y={780} size={26} at={462.7} color={C.muted} opacity={gridP}>art styles</Label>
+      <Label x={960} y={780} size={26} at={464.5} color={C.muted} opacity={gridP}>altered</Label>
+      <Label x={1200} y={780} size={24} at={468.4} color={C.muted} opacity={gridP}>photoshop detector</Label>
     </g>
   );
 };
@@ -538,6 +575,9 @@ export const Scene28: React.FC = () => {
       <g opacity={attackP}>
         <Ink d={arcD(960, 520, 300, Math.PI * 0.08, Math.PI * 0.92, 3050, 1.2)} p={attackP} color={C.yellow} width={2.6} opacity={0.3} />
       </g>
+      <Label x={960} y={930} size={36} at={521.0} color={C.yellow} opacity={attackP}>
+        label attack
+      </Label>
     </g>
   );
 };

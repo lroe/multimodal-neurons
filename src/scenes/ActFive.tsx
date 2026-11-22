@@ -209,6 +209,15 @@ export const Scene31: React.FC = () => {
         <Ink d={lineD(1150, 712, 1182, 748, 3262, 1.1)} p={winP} color={C.red} width={4.4} />
         <Ink d={lineD(1182, 712, 1150, 748, 3263, 1.1)} p={winP} color={C.red} width={4.4} />
       </g>
+      <Label x={960} y={560} size={30} at={572.3} color={C.muted} opacity={wordP}>
+        the word
+      </Label>
+      <Label x={960} y={810} size={30} at={578.1} color={C.cyan} opacity={swatchP}>
+        the ink color
+      </Label>
+      <Label x={960} y={900} size={40} at={584.9} color={C.yellow} opacity={winP}>
+        the word wins
+      </Label>
     </g>
   );
 };
@@ -256,6 +265,15 @@ export const Scene32: React.FC = () => {
         <Ink d={lineD(1320, 592, 1380, 510, 3291, 0.7)} p={checkP} color={C.green} width={5} />
         <Ink d={lineD(900, 610, 940, 610, 3292, 0.5)} p={checkP} color={C.deep} width={2.4} opacity={0.5} />
       </g>
+      <Label x={720} y={870} size={30} at={591.9} color={C.muted} opacity={predP}>
+        prediction
+      </Label>
+      <Label x={1090} y={870} size={30} at={594.7} color={C.ink} opacity={realP}>
+        real photo
+      </Label>
+      <Label x={960} y={940} size={34} at={596.1} color={C.green} opacity={checkP}>
+        confirmed
+      </Label>
     </g>
   );
 };
@@ -276,7 +294,7 @@ export const Scene33: React.FC = () => {
       <g opacity={1 - flexP}>
         <SourceIcon src="source/icons/tech_gate.png" cx={960} cy={520} size={540} opacity={gateP} />
         <Txt x={960} y={820} size={38} color={C.muted} opacity={gateP * 0.8}>filter</Txt>
-        <g transform={`translate(0 ${y})`}>
+        <g transform={`translate(0 ${y})`} opacity={1 - warnP}>
           <Ink d={rectD(860, 650, 200, 150, 3310, 0.9, 8)} p={slipP} color={C.ink} width={2.8} fill={C.surface} fillOpacity={0.7} />
           <Ink d={polyD([[890, 760], [910, 710], [940, 740], [970, 690], [1000, 750], [1020, 700], [1030, 760]], 3311, 0.8)} p={slipP} color={C.cyan} width={2.4} opacity={0.5} />
           <Txt x={960} y={714} size={56} color={warnP > 0.4 ? C.red : C.ink} font="display" weight={700} opacity={slipP}>OK</Txt>
@@ -298,6 +316,15 @@ export const Scene33: React.FC = () => {
         <Ink d={lineD(920, 450, 920, 590, 3333, 0.6)} p={flexP} color={C.green} width={6} />
         <Ink d={lineD(1080, 520, 1140, 520, 3334, 0.6)} p={flexP} color={C.red} width={6} />
       </g>
+      <Label x={960} y={940} size={30} at={608.6} color={C.red} opacity={slipP * (1 - flexP)}>
+        slip past
+      </Label>
+      <Label x={960} y={350} size={30} at={618.6} color={C.red} opacity={warnP * (1 - flexP)}>
+        real concern
+      </Label>
+      <Label x={960} y={780} size={30} at={626.8} color={C.muted} opacity={flexP}>
+        same flexibility
+      </Label>
     </g>
   );
 };

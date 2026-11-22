@@ -115,6 +115,12 @@ export const Scene35: React.FC = () => {
           </g>
         ) : null}
       </g>
+      <Label x={960} y={920} size={36} at={cue('hidden', 663)} color={C.muted} opacity={hiddenP * (1 - readP)}>
+        hidden text
+      </Label>
+      <Label x={960} y={920} size={36} at={cue('instructions', 665.5)} color={C.red} opacity={readP}>
+        instruction
+      </Label>
     </g>
   );
 };
@@ -224,6 +230,15 @@ export const Scene36: React.FC = () => {
           <Ink d={waveD(770, 740, 1130, 740, 18, 2.2, 3692)} p={row3} color={C.red} width={2.6} opacity={0.55} />
         </g>
       </g>
+      <Label x={960} y={392} size={28} at={cue('Middle', 688)} color={C.red} opacity={row1}>
+        Middle East → terrorism
+      </Label>
+      <Label x={960} y={612} size={28} at={cue('immigration', 690)} color={C.red} opacity={row2}>
+        immigration → Latin America
+      </Label>
+      <Label x={960} y={872} size={26} at={cue('dark', 692)} color={C.red} opacity={row3}>
+        dark-skinned people ↔ gorillas
+      </Label>
     </g>
   );
 };
@@ -255,6 +270,15 @@ export const Scene37: React.FC = () => {
         <Txt x={960} y={545} size={104} color={C.green} opacity={eqP} font="display" weight={700}>=</Txt>
         <Ink d={circleD(960, 545, 88, 3710, 1.2)} p={eqP} color={C.green} width={2} opacity={0.15} />
       </g>
+      <Label x={960} y={430} size={28} at={703.0} color={C.muted} opacity={topP}>
+        spider ↔ Spider-Man
+      </Label>
+      <Label x={960} y={840} size={28} at={710.5} color={C.muted} opacity={bottomP}>
+        region ↔ threat
+      </Label>
+      <Label x={960} y={650} size={30} at={713.0} color={C.green} opacity={eqP}>
+        same mechanism
+      </Label>
     </g>
   );
 };
@@ -302,6 +326,12 @@ export const Scene38: React.FC = () => {
         <circle cx={960} cy={650} r={8} fill={C.red} opacity={warnP} />
         <Ink d={circleD(960, 540, 300, 3752, 1.8)} p={warnP} color={C.red} width={2} dash="2 14" opacity={0.2} />
       </g>
+      <Label x={960} y={220} size={30} at={cue('warning', 731)} color={C.red} opacity={warnP}>
+        the author's warning
+      </Label>
+      <Label x={960} y={880} size={38} at={cue('unchecked', 732)} color={C.muted} opacity={warnP}>
+        unchecked associations
+      </Label>
     </g>
   );
 };
@@ -378,6 +408,24 @@ export const Scene39: React.FC = () => {
           </g>
         ))}
       </g>
+      <Label x={700} y={700} size={32} at={742.2} color={C.muted} opacity={brainP}>
+        brain
+      </Label>
+      <Label x={1220} y={700} size={32} at={742.8} color={C.muted} opacity={netP}>
+        one network
+      </Label>
+      <Label x={620} y={900} size={24} at={cue('seen', 762)} color={C.muted} opacity={modalitiesP}>
+        seen
+      </Label>
+      <Label x={840} y={900} size={24} at={cue('written', 762.5)} color={C.pink} opacity={modalitiesP}>
+        written
+      </Label>
+      <Label x={1080} y={900} size={24} at={cue('spoken', 763)} color={C.cyan} opacity={modalitiesP}>
+        spoken
+      </Label>
+      <Label x={1300} y={900} size={24} at={cue('drawn', 763.5)} color={C.orange} opacity={modalitiesP}>
+        drawn
+      </Label>
     </g>
   );
 };
@@ -428,6 +476,15 @@ export const Scene40: React.FC = () => {
         <Magnifier x={1120} y={600} p={appleP} s={1.0} />
         <Ink d={lineD(840, 770, 1140, 770, 3820, 0.5)} p={appleP} color={C.muted} width={2.4} opacity={0.3} />
       </g>
+      <Label x={850} y={520} size={28} at={765.3} color={C.green} opacity={circleP * (1 - eyeP)}>
+        strength
+      </Label>
+      <Label x={1070} y={520} size={28} at={766.2} color={C.red} opacity={circleP * (1 - eyeP)}>
+        weakness
+      </Label>
+      <Label x={960} y={850} size={34} at={cue('clue', 785)} color={C.muted} opacity={eyeP}>
+        reads the label
+      </Label>
     </g>
   );
 };
@@ -522,6 +579,15 @@ export const Scene41: React.FC = () => {
           </g>
         ) : null}
       </g>
+      <Label x={960} y={950} size={26} at={801.9} color={C.muted} opacity={descP * (1 - bridgeP)}>
+        image generators · search · assistants
+      </Label>
+      <Label x={960} y={850} size={30} at={cue('languages', 817)} color={C.muted} opacity={bridgeP * (1 - backP)}>
+        one concept, many languages
+      </Label>
+      <Label x={960} y={940} size={44} at={833.6} color={C.ink} opacity={readP}>
+        what is it reading?
+      </Label>
     </g>
   );
 };
