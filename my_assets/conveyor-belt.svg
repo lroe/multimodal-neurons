@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 360" width="1600" height="360" fill="none">
+  <g id="belt-body" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="100" y="180" width="1400" height="120" rx="40" fill="#1E1F29" fill-opacity="0.55" stroke="#B8B9C5" stroke-width="6"/>
+  </g>
+
+  <g id="belt-top" stroke="#F8F8F2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 140 200 L 1460 200"/>
+  </g>
+
+  <g id="belt-bottom" stroke="#6272A4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7">
+    <path d="M 140 280 L 1460 280"/>
+  </g>
+
+  <g id="pulley-left" stroke="#B8B9C5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <circle cx="140" cy="240" r="34"/>
+    <circle cx="140" cy="240" r="10" fill="#8BE9FD" stroke="none"/>
+  </g>
+
+  <g id="pulley-right" stroke="#B8B9C5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <circle cx="1460" cy="240" r="34"/>
+    <circle cx="1460" cy="240" r="10" fill="#8BE9FD" stroke="none"/>
+  </g>
+
+  <g id="roller-1" transform="translate(340 240)" stroke="#8BE9FD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <g id="roller-1-spin">
+      <circle cx="0" cy="0" r="22"/>
+      <path d="M 0 0 L 16 0 M 0 0 L -8 13.856 M 0 0 L -8 -13.856"/>
+    </g>
+  </g>
+
+  <g id="roller-2" transform="translate(560 240)" stroke="#8BE9FD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <g id="roller-2-spin">
+      <circle cx="0" cy="0" r="22"/>
+      <path d="M 0 0 L 16 0 M 0 0 L -8 13.856 M 0 0 L -8 -13.856"/>
+    </g>
+  </g>
+
+  <g id="roller-3" transform="translate(800 240)" stroke="#8BE9FD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <g id="roller-3-spin">
+      <circle cx="0" cy="0" r="22"/>
+      <path d="M 0 0 L 16 0 M 0 0 L -8 13.856 M 0 0 L -8 -13.856"/>
+    </g>
+  </g>
+
+  <g id="roller-4" transform="translate(1040 240)" stroke="#8BE9FD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <g id="roller-4-spin">
+      <circle cx="0" cy="0" r="22"/>
+      <path d="M 0 0 L 16 0 M 0 0 L -8 13.856 M 0 0 L -8 -13.856"/>
+    </g>
+  </g>
+
+  <g id="roller-5" transform="translate(1280 240)" stroke="#8BE9FD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <g id="roller-5-spin">
+      <circle cx="0" cy="0" r="22"/>
+      <path d="M 0 0 L 16 0 M 0 0 L -8 13.856 M 0 0 L -8 -13.856"/>
+    </g>
+  </g>
+</svg>

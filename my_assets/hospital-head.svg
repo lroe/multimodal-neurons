@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200" fill="none">
+  <g id="head" stroke="#F8F8F2" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 600 250
+             C 535 246 470 292 430 360
+             C 410 400 408 430 396 458
+             C 386 480 372 492 350 500
+             C 366 512 380 532 390 565
+             C 382 572 383 580 395 585
+             C 400 602 414 624 430 640
+             C 452 674 475 700 500 720
+             C 512 750 510 790 504 830
+             C 498 880 499 930 500 980
+             C 620 992 780 992 900 980
+             C 892 918 858 858 830 820
+             C 826 740 822 620 820 500
+             C 817 432 790 345 760 300
+             C 716 258 660 248 600 250 Z"/>
+    <path d="M 702 572 C 700 555 720 545 738 552 C 756 559 756 577 745 588 C 736 598 731 608 727 618 C 723 628 711 631 705 624 C 700 617 707 610 713 605"/>
+    <path d="M 731 574 C 722 567 713 570 713 579 L 713 586 C 713 594 722 594 722 586"/>
+    <circle cx="475" cy="470" r="6" fill="#F8F8F2" stroke="none"/>
+  </g>
+
+  <g id="brain" stroke="#FF79C6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 493 418
+             C 486 388 503 358 533 341
+             C 553 328 578 327 598 333
+             C 613 313 648 311 666 331
+             C 688 323 716 333 730 353
+             C 754 365 772 393 773 423
+             C 781 448 776 478 760 498
+             C 750 523 728 535 708 527
+             C 696 541 680 541 672 529
+             C 664 541 660 555 652 561
+             C 644 567 638 559 642 549
+             C 645 540 636 537 626 537
+             C 606 545 586 541 572 529
+             C 548 538 523 523 513 503
+             C 496 483 488 448 493 418 Z"/>
+    <path d="M 618 335 C 630 361 624 395 604 425"/>
+    <path d="M 546 388 C 566 363 596 359 614 381"/>
+    <path d="M 652 343 C 672 331 698 339 706 363 C 712 383 700 401 682 407"/>
+    <path d="M 554 479 C 576 455 612 453 630 475 C 644 493 632 513 612 517"/>
+    <path d="M 698 439 C 722 427 746 439 750 463 C 754 485 738 501 718 499"/>
+  </g>
+
+  <g id="electrode-1" stroke="#FF5555" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 980 210 C 920 250 820 300 740 380"/>
+    <circle id="electrode-1-pad" cx="980" cy="210" r="9" fill="#FF5555" stroke="none"/>
+    <circle id="electrode-1-tip" cx="740" cy="380" r="6" fill="#FF5555" stroke="none"/>
+  </g>
+
+  <g id="electrode-2" stroke="#FF5555" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 1010 280 C 940 330 830 375 720 430"/>
+    <circle id="electrode-2-pad" cx="1010" cy="280" r="9" fill="#FF5555" stroke="none"/>
+    <circle id="electrode-2-tip" cx="720" cy="430" r="6" fill="#FF5555" stroke="none"/>
+  </g>
+
+  <g id="electrode-3" stroke="#FF5555" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 1040 350 C 950 400 820 435 700 480"/>
+    <circle id="electrode-3-pad" cx="1040" cy="350" r="9" fill="#FF5555" stroke="none"/>
+    <circle id="electrode-3-tip" cx="700" cy="480" r="6" fill="#FF5555" stroke="none"/>
+  </g>
+</svg>

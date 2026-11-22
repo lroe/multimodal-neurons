@@ -1,0 +1,109 @@
+There’s a single cell in a human brain that fires for Halle Berry. A photo of her, a pencil sketch, her name written on a screen, her name said out loud.
+
+Scientists have now found the same kind of cell inside an AI, except it fires for Spider-Man. It lights up for real spiders, for Spider-Man comics, and even for the word “spider.”
+
+And that kind of cell explains how a sticky note stuck on an apple once fooled one of the best image AIs in the world. It also explains the ugliest thing they found in there.
+
+It starts in a hospital.
+
+In the early 2000s, a group of neuroscientists was working with patients who had severe epilepsy. To find out where the seizures began, surgeons had placed hair-thin electrodes deep inside the patients’ brains. That gave the scientists a rare opening. They could listen to single human neurons, live, while a person sat there looking at things on a screen.
+
+So they showed the patients pictures. Buildings, animals, famous faces. Most cells ignored most of what they saw. Then every so often, one would suddenly start firing, and the scientists would lean in to figure out why.
+
+One cell fired for Halle Berry. Photos of her, sure. But it also fired for a pencil sketch of her. It fired for a picture of her in a Catwoman mask, where you can barely see her face. It fired when the patient simply read her name, plain letters on a screen. And in a later study, a cell like it responded to her name spoken out loud.
+
+That rules out a face detector, because a face detector wouldn’t care about a name. It rules out pixels altogether. This one cell was tracking Halle Berry as a concept, however she happened to show up: seen, sketched, written or spoken. Scientists call these multimodal neurons.
+
+A quick caution. The press started calling these “grandmother cells,” as if you had exactly one neuron for every person you know. The researchers who found them pushed back on that. A concept lives in a small, sparse group of cells, and the electrode just happened to land next to one of them.
+
+Even so, it suggested the brain stores ideas, with a face, a name and a sketch as different ways in.
+
+That left some AI researchers with a question. If a brain boils the world down to concepts that cut across the senses, could an artificial neural network end up doing the same thing?
+
+For about a decade, the usual way to teach a computer to see went like this. You gather a million photos, each with one label from a fixed list. Dog. Toaster. Volcano. The network practices picking the right label until it’s good at it.
+
+When researchers opened those networks up, they found something orderly. The first layers had neurons for edges. After that came curves, then textures like fur, then parts like wheels and eyes, and finally whole objects. An assembly line that starts with lines and ends with dogs.
+
+But most of those neurons cared about what things look like. A dog-ear neuron fires for dog ears, and that’s about it. There wasn’t much in the way of ideas.
+
+Then, in January 2021, OpenAI released a system called CLIP, and it changed the setup. There was no tidy list of labels. CLIP learned from hundreds of millions of images collected from the internet, each one paired with whatever text happened to be sitting next to it. A caption. A title. A random comment.
+
+Here’s a way to picture its job. Imagine someone dumps ten thousand photos and ten thousand captions on the floor, shuffles everything, and tells you to pair them up. You’d get better and better at it. You’d start noticing that captions with the word “beach” go with sand and water, and that a caption full of exclamation points probably goes with a birthday party. CLIP plays that game at an enormous scale.
+
+Technically, one half of the system looks at images and the other half reads text, and both turn what they take in into points in the same shared space. When a picture and a caption belong together, training pulls them closer. When they don’t, it pushes them apart. Repeat that a few hundred million times.
+
+What you end up with is a model you can question without retraining it. Say you want to know whether a photo shows a dog or a toaster. You write two sentences, “a photo of a dog” and “a photo of a toaster,” and check which one the image sits closer to. That’s called zero-shot classification.
+
+The nice thing is that you can change what the model looks for just by changing the sentences. No new labels, no new training run. Ask it about dogs today and subway signs tomorrow.
+
+And it worked. On a famous benchmark, CLIP matched a classic image classifier even though it never trained on that benchmark’s labels. It also held up on the harder versions of the test, the ones full of sketches, cartoons and odd renditions of an object, which tended to break older systems.
+
+Think about what you’d need to know to guess captions from across the internet. Celebrities, flags, landmarks, memes. That a drawn cat and a photographed cat are the same animal. And you’d have to read. Say there’s a photo of a bakery with a sign over the door, and the caption names the bakery. The easiest way to make that match is to read the sign. Nobody programmed CLIP to read. It picked the skill up on its own, and the research team noticed.
+
+So what’s actually going on in there?
+
+The team did the most direct thing they could think of. They went through the neurons one by one, using two main tools. For the first, you run a huge pile of images through the model, and for any given neuron you pull out the pictures that make it fire hardest. For the second, you start with random static and nudge the pixels, over and over, until the neuron is as excited as it can get. Basically, you’re asking the neuron to draw what it likes.
+
+While flipping through the top images for one neuron, somebody spotted a pattern. Spiders. Real ones, crawling over leaves. Fine, that’s what you’d expect. But there was also the word “spider,” typed out. And comic-book Spider-Man. And people in Spider-Man costumes.
+
+Same neuron. This is the Halle Berry cell, rebuilt in a computer. The real thing, a symbol for the thing, and a cartoon of the thing, all landing on a single neuron.
+
+And it wasn’t a one-off. When the team went through the network, most of the neurons they checked made sense to a person. That’s unusual. Most of the time, the inside of a neural network looks like noise to us.
+
+So what do all those neurons actually care about?
+
+Start with people. There are neurons for specific individuals. One for Barack Obama, which also fires a little for his wife. One for Jesus, which responds to crosses, stained glass, scripture and religious art. One for Donald Trump, which responds to his face, his written name, and the slogans and imagery around his campaigns.
+
+The team dug into these. For one group of neurons, they hand-labeled more than fifteen hundred images to work out what each neuron really meant. They found that a neuron isn’t a simple dimmer switch. A medium response and a strong response can mean different things, and even when a neuron goes negative and shuts off, that can tell you something too.
+
+Then there are places. Neurons for whole regions of the world: the United States, Europe, Africa, the Middle East. Each one reacts to flags, maps, landmarks, food, street signs, writing, and the people and names tied to that part of the world. Nobody taught CLIP geography. But if you’re trying to guess a caption, it helps to know where a photo was taken.
+
+Then feelings. Emotion neurons respond to faces, but also to the word for the feeling, and to scenes that carry it. A birthday party, a stormy sky. The team found that complicated emotions often look like blends of simpler ones. There’s even a cluster that ties together sadness, distress and depression. One caveat: psychologists disagree about how well a face reveals what someone feels. Still, the model clearly built its emotional categories from the way people pair words, faces and situations online.
+
+Then there are the stranger ones. There are neurons for seasons and months. There’s a morning neuron that fires for breakfast. There are neurons that count, reacting to how many things are in the picture. There are neurons for art styles. And my favorite: a neuron for images that look digitally altered. A little Photoshop detector that nobody asked for.
+
+Every one of these gathers a cluster of related things around a theme, and none of them much cares how that theme shows up.
+
+These neurons are the vocabulary the model uses to make decisions. A label like “piggy bank” isn’t spotted by one dedicated cell. It gets built from the concepts around it. Some push the answer up, some push it down, and the model adds up the votes.
+
+Which creates a problem. If a concept neuron can’t tell whether it’s looking at the thing or at the word for the thing, then anyone who can write the word gets a vote.
+
+Back to the apple.
+
+When the researchers put a note on the Granny Smith, CLIP switched to iPod, and got more sure of itself. So they tried other objects. Draw dollar signs all over a photo of a poodle, and CLIP calls it a piggy bank. The money neurons start voting, and the dog loses. Write “pizza” on a label, stick it on a dog, and the model starts leaning toward pizza. The researchers called these typographic attacks.
+
+If you follow AI security, this should seem odd, because the famous attacks on image systems are much more technical. You compute a special pattern of noise that humans can’t see, tuned using access to the model’s internals. There are adversarial patches, those trippy stickers built to hijack a classifier. There was even a 3D-printed turtle that a vision system mistook for a rifle. All clever, and all hard to pull off.
+
+This one took a marker. Any person could read the attack, and it worked out in the real world, with a pen and paper.
+
+So why does it work? Go back to the Spider-Man neuron. It treats the word “spider” and an actual spider as the same idea. The iPod neuron does the same thing, so a label on an apple sets off “iPod” almost as if you’d held up the real device. CLIP gives words a lot of weight.
+
+You might know the Stroop test. Print the word “blue” in red ink and ask someone to name the ink color, and they stumble, because reading is automatic and it overrides what their eyes are telling them. CLIP had its own version of that. When the word and the picture disagreed, the word often won.
+
+Here’s the part I like most. The team saw this coming. Once they realized the model was leaning on text to classify images, they predicted this kind of attack, then went out and confirmed it with ordinary objects. Looking inside the model told them how to break it before anyone stumbled onto the problem by accident.
+
+They didn’t treat it as a party trick, either. To see why, picture a filter built to catch unwanted images. If the model behind it can be nudged by words printed on the picture itself, anyone who knows that can try to slip past it. The authors said as much: it’s a real concern, not just a curiosity. And they argued the weakness comes from the same thing that makes CLIP so flexible. It generalizes across the literal and the iconic, and that helps and hurts.
+
+So what happened to the sticky-note trick? Mostly, it stopped working on the biggest models. A 2025 benchmark built from real handwritten-label attacks found that one top commercial model barely lost any accuracy, while some smaller open models took heavy hits. The researchers behind it found that pairing the vision part with a larger language model made systems much harder to fool.
+
+But the weakness didn’t disappear. Plenty of open models still build on CLIP-style image encoders, and the same instinct has come back in a newer form. Researchers now study text hidden inside images that tries to give instructions to an AI that’s reading them. It’s a different trick, but it works for the same reason: the model takes words in a picture seriously.
+
+CLIP learned from the internet, so the internet’s associations went into the concepts it built. The fair ones, the unfair ones, and the ugly ones. And that was with training data that had been filtered. Even a curated slice of the internet carries a lot of baggage.
+
+Among the neurons the team found: a “Middle East” neuron tied to terrorism. An “immigration” neuron that responds to Latin America. And a neuron that fires for both dark-skinned people and gorillas, the same kind of failure that got a big tech company into serious trouble years earlier.
+
+Nobody wrote a bad rule here. This is the Spider-Man mechanism at work: gather what tends to show up together and call it a concept. If the data puts a region next to a threat over and over, the model fuses them as easily as it fused a spider and a superhero.
+
+Two points. First, this is a failure you can see. You can pull up those neurons and point at them, which you can’t do with most black boxes. Second, seeing a neuron doesn’t tell you how it shapes any given decision. The authors’ warning is straightforward: a model like this absorbs the unchecked associations in its training data, and those need to be studied before the model goes out into the world.
+
+The paper doesn’t claim CLIP thinks like a brain. It studies one network, and the authors admit that many concepts probably aren’t held in single neurons at all. They may be spread across the network in ways that are much harder to read. The neurons in this paper are the ones that were easiest to find.
+
+Still, something here lines up. Brains and networks both seem to boil the world down to concepts that don’t depend on how the information arrives: seen, written, spoken or drawn.
+
+And the strength and the weakness come from the same place. A system that treats the word “spider” and the animal as one idea can end up treating an “iPod” label as the real device. It finds Halle Berry in a sketch, and it finds a threat in a region of the world.
+
+When an AI gets something right, it’s easy to assume it’s seeing what you see. Sometimes it is. Sometimes it’s reading a clue next to the thing, like a label, a background, a caption. The apple and the sticky note are a cartoon version of a mistake that can happen in much subtler ways.
+
+More than five years later, CLIP’s descendants sit inside image generators, search tools and AI assistants. Looking inside models like this, finding the concepts, naming them and predicting how they’ll fail has grown into a whole field of research. One of this paper’s authors went on to co-found Anthropic, where interpretability researchers later found a feature in a large language model that linked text in many languages with photos of a single bridge: the Golden Gate Bridge. Another concept that cuts across the senses.
+
+Which brings us back to the apple. The sticky-note trick has mostly stopped working on the biggest models, but the question behind it hasn’t gone away. So next time an AI tells you what it sees, it’s worth asking what it’s actually reading.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" fill="none">
+  <g id="arrow-image-shaft" stroke="#8BE9FD" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 760 440 C 800 510 840 590 880 650"/>
+  </g>
+
+  <g id="arrow-image-head" stroke="#8BE9FD" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 880 650 L 862.07 641.14 M 880 650 L 878.71 630.04"/>
+  </g>
+
+  <g id="arrow-text-shaft" stroke="#FF79C6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 1160 440 C 1120 510 1080 590 1040 650"/>
+  </g>
+
+  <g id="arrow-text-head" stroke="#FF79C6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 1040 650 L 1041.29 630.04 M 1040 650 L 1057.93 641.14"/>
+  </g>
+</svg>
