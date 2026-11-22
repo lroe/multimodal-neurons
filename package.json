@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "@remotion/cli": "4.0.545",
-    "remotion": "4.0.545",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "remotion": "4.0.545"
   },
   "devDependencies": {
+    "@remotion/bundler": "4.0.545",
+    "@remotion/renderer": "4.0.545",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "typescript": "5.8.3"
